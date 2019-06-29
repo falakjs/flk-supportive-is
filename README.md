@@ -2,6 +2,52 @@
 
 This is a very lightweight library to validate different things
 
+# Table of contents 
+- [Supportive Is](#Supportive-Is)
+- [Table of contents](#Table-of-contents)
+- [Install](#Install)
+- [Attaching to the application](#Attaching-to-the-application)
+    - [Node JS](#Node-JS)
+    - [using import syntax](#using-import-syntax)
+    - [Browser](#Browser)
+- [Dependencies](#Dependencies)
+- [Usage](#Usage)
+    - [Is.null](#Isnull)
+    - [Is.undefined](#Isundefined)
+    - [Is.numeric](#Isnumeric)
+    - [Is.int](#Isint)
+    - [Is.float](#Isfloat)
+    - [Is.NaN](#IsNaN)
+    - [Is.regex](#Isregex)
+    - [Is.array](#Isarray)
+    - [Is.object](#Isobject)
+    - [Is.plainObject](#IsplainObject)
+    - [Is.validHtmlId](#IsvalidHtmlId)
+    - [Is.jquery](#Isjquery)
+    - [Is.dom](#Isdom)
+    - [Is.formElement](#IsformElement)
+    - [Is.formData](#IsformData)
+    - [Is.a](#Isa)
+    - [Is.iterable](#Isiterable)
+    - [Is.symbol](#Issymbol)
+    - [Is.string](#Isstring)
+    - [Is.bool](#Isbool)
+    - [Is.function](#Isfunction)
+    - [Is.callable](#Iscallable)
+    - [Is.native](#Isnative)
+    - [Is.scalar](#Isscalar)
+    - [Is.empty](#Isempty)
+    - [Is.json](#Isjson)
+    - [Is.url](#Isurl)
+    - [Is.email](#Isemail)
+    - [Is.cookieEnabled](#IscookieEnabled)
+    - [Is.mobile.*](#Ismobile)
+    - [Is.desktop](#Isdesktop)
+    - [Is.browser](#Isbrowser)
+    - [Is.mobileNumber](#IsmobileNumber)
+      - [.eg](#eg)
+
+
 # Install
 
 `npm install flk-supportive-is`
@@ -33,51 +79,7 @@ import Is from 'flk-supportive-is';
 
 # Usage
 
-Here is full methods list
-- [Supportive Is](#Supportive-Is)
-- [Install](#Install)
-- [Attaching to the application](#Attaching-to-the-application)
-    - [Node JS](#Node-JS)
-    - [using import syntax](#using-import-syntax)
-    - [Browser](#Browser)
-- [Dependencies](#Dependencies)
-- [Usage](#Usage)
-      - [Is.null](#Isnull)
-      - [Is.undefined](#Isundefined)
-      - [Is.numeric](#Isnumeric)
-      - [Is.int](#Isint)
-      - [Is.float](#Isfloat)
-      - [Is.NaN](#IsNaN)
-      - [Is.regex](#Isregex)
-      - [Is.array](#Isarray)
-      - [Is.object](#Isobject)
-      - [Is.plainObject](#IsplainObject)
-      - [Is.validHtmlId](#IsvalidHtmlId)
-      - [Is.jquery](#Isjquery)
-      - [Is.dom](#Isdom)
-      - [Is.formElement](#IsformElement)
-      - [Is.formData](#IsformData)
-      - [Is.a](#Isa)
-      - [Is.iterable](#Isiterable)
-      - [Is.symbol](#Issymbol)
-      - [Is.string](#Isstring)
-      - [Is.bool](#Isbool)
-      - [Is.function](#Isfunction)
-      - [Is.callable](#Iscallable)
-      - [Is.native](#Isnative)
-      - [Is.scalar](#Isscalar)
-      - [Is.empty](#Isempty)
-      - [Is.json](#Isjson)
-      - [Is.url](#Isurl)
-      - [Is.email](#Isemail)
-      - [Is.cookieEnabled](#IscookieEnabled)
-      - [Is.mobile.*](#Ismobile)
-      - [Is.desktop](#Isdesktop)
-      - [Is.browser](#Isbrowser)
-      - [Is.mobileNumber](#IsmobileNumber)
-        - [.eg](#eg)
-
-#### Is.null
+### Is.null
 
 Check if the given value is null
 
@@ -88,7 +90,7 @@ name = undefined;
 console.log(Is.null(name)); // false
 ```
 
-#### Is.undefined
+### Is.undefined
 Check if the given value is undefined
 ``` javascript
 let name = 'Hasan';
@@ -99,7 +101,7 @@ let age = undefined;
 console.log(Is.undefined(age)); // true
 ```
 
-#### Is.numeric
+### Is.numeric
 
 Check if the given value is a number whatever if its data type is String or Number
 
@@ -114,7 +116,7 @@ let floatWrittenInString = '99.99';
 console.log(Is.numeric(floatWrittenInString)); // true
 ```
 
-#### Is.int
+### Is.int
 Check if the given value is an integer and its data type is number
 ``` javascript
 let number = 12;
@@ -123,7 +125,7 @@ let numberInString = '12';
 console.log(Is.int(numberInString)); // false
 ```
 
-#### Is.float
+### Is.float
 
 Check if the given value is a float number and its data type is number
 
@@ -136,7 +138,7 @@ let numberInString = '12.5';
 console.log(Is.float(numberInString)); // false
 ```
 
-#### Is.NaN
+### Is.NaN
 Check if the given value is Not a Number
 This method works exactly same as isNaN as it is already implementing it xD.
 ``` javascript
@@ -146,7 +148,7 @@ number = '76'; // string
 console.log(Is.NaN(number)); // true
 ```
 
-#### Is.regex
+### Is.regex
 Check if the given value is a regex expression.
 ``` javascript
 let regex = /[a-z]+/; 
@@ -156,7 +158,7 @@ let string = '/[a-z]+/';
 console.log(Is.regex(string)); // false
 ```
 
-#### Is.array
+### Is.array
 
 Check if the given value is an array
 
@@ -165,7 +167,7 @@ let myArray = [4 , 'hello', 9];
 console.log(Is.array(myArray)); // true
 ```
 
-#### Is.object
+### Is.object
 
 Check if the given value is an object
 
@@ -188,7 +190,7 @@ if (Is.object(myVar) && ! Is.array(myVar)) {
 }
 ```
 
-#### Is.plainObject
+### Is.plainObject
 
 Check if the given value is a plain object
 
@@ -204,7 +206,7 @@ let myArray = [];
 console.log(Is.plainObject(myArray)); // false
 ```
 
-#### Is.validHtmlId
+### Is.validHtmlId
 
 Check if the given value is a valid html id attribute
 
@@ -217,7 +219,7 @@ let invalidId = 'my,id';
 console.log(Is.validHtmlId(invalidId)); //false
 ```
 
-#### Is.jquery
+### Is.jquery
 
 Check if the given value is a jquery object
 
@@ -226,7 +228,7 @@ let body = $('body');
 console.log(Is.jquery(body)); // true
 ```
 
-#### Is.dom
+### Is.dom
 
 Check if the given value is a dom element
 
@@ -242,7 +244,7 @@ console.log(Is.dom(document.body)); // true
 ```
 
 
-#### Is.formElement
+### Is.formElement
 
 Check if the given value is an instance of [HTMLFormElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement).
 
@@ -255,7 +257,7 @@ console.log(Is.formElement(document.body)); // false
 ```
 
 
-#### Is.formData
+### Is.formData
 
 Check if the given value is an instance of [FormData](https://developer.mozilla.org/en-US/docs/Web/API/FormData).
 
@@ -269,7 +271,7 @@ console.log(Is.formData(myForm)); // false
 console.log(Is.formData(formDataForm)); // true
 ```
 
-#### Is.a
+### Is.a
 
 Check if the given object value is an object of the given class name
 
@@ -282,7 +284,7 @@ console.log(Is.a(moyObject, 'MyClass')); // true
 
 ```
 
-#### Is.iterable
+### Is.iterable
 
 Check if the given object is iterable
 
@@ -293,7 +295,7 @@ console.log(Is.iterable(new Map)); // true
 console.log(Is.iterable(new Set)); // true
 ```
 
-#### Is.symbol
+### Is.symbol
 
 Check if the given value is a `Symbol`
 
@@ -303,7 +305,7 @@ console.log(Is.symbol(Symbol('foo'))); // true
 ```
 
 
-#### Is.string
+### Is.string
 
 Check if the given value is string
 
@@ -311,7 +313,7 @@ Check if the given value is string
 console.log(Is.string('this is a string')); // true
 ```
 
-#### Is.bool
+### Is.bool
 
 > `Is.bool` has an alias method `Is.boolean`
 
@@ -322,7 +324,7 @@ console.log(Is.bool(true)); // true
 console.log(Is.bool(false)); // true
 ```
 
-#### Is.function
+### Is.function
 
 Check if the given value is a function
 
@@ -338,7 +340,7 @@ console.log(Is.function(sum)); // true
 console.log(Is.function(sum(2, 3))); // false
 ```
 
-#### Is.callable
+### Is.callable
 
 Check if the given value is a callable value
 
@@ -358,7 +360,7 @@ console.log(Is.callable(callback)); // true
 console.log(Is.callable(callback())); // false
 ```
 
-#### Is.native
+### Is.native
 
 Check if the given value is a native function
 
@@ -378,7 +380,7 @@ Math.sum = function (num1, num2) {
 console.log(Is.native(Math.sum)); // false
 ```
 
-#### Is.scalar
+### Is.scalar
 
 Check if the given value is a string, number or boolean
 
@@ -392,7 +394,7 @@ console.log(Is.scalar([])); // false
 console.log(Is.scalar({})); // false
 ```
 
-#### Is.empty
+### Is.empty
 
 Check if the given value is empty
 
@@ -427,7 +429,7 @@ value = 0;
 console.log(Is.empty(value)); // false
 ```
 
-#### Is.json
+### Is.json
 
 Check if the given value string is a valid json format
 
@@ -436,7 +438,7 @@ let value = '{"name":"Hasan","job":"Full Stack Developer"}';
 console.log(Is.json(value)); // true
 ```
 
-#### Is.url
+### Is.url
 
 Check if the given value is a valid url
 
@@ -457,7 +459,7 @@ let url = 'google';
 console.log(Is.url(url)); // false
 ```
 
-#### Is.email
+### Is.email
 
 Check if the given value string is a valid email
 
@@ -466,7 +468,7 @@ let myEmail = 'hassanzohdy@gmail.com';
 console.log(Is.email(myEmail)); // true
 ```
 
-#### Is.cookieEnabled
+### Is.cookieEnabled
 
 Check if cookies are enabled in the browser
 
@@ -476,7 +478,7 @@ if (! Is.cookeEnabled()) {
 }
 ```
 
-#### Is.mobile.*
+### Is.mobile.*
 
 Check if current visitor is browsing from a sort-of mobile
 
@@ -530,7 +532,7 @@ if (Is.mobile.any()) {
 }
 ```
 
-#### Is.desktop
+### Is.desktop
 
 Check if current visitor is browsing from a desktop device
 > Please note that any non mobile type will be considered as desktop.
@@ -541,7 +543,7 @@ if (! Is.cookeEnabled()) {
 }
 ```
 
-#### Is.browser
+### Is.browser
 
 Check if the current browser matches the given name
 
@@ -562,11 +564,11 @@ if (Is.browser('chrome')) {
 }
 ```
 
-#### Is.mobileNumber
+### Is.mobileNumber
 
 > Works only with Egypt mobile numbers, feel free to `PR` your country mobile number validation.
 
-##### .eg
+#### .eg
 > Validate mobile number for the following syntaxes:
 
 - 01[0|1|2|5]-8(digits)
