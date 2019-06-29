@@ -86,6 +86,7 @@ Check if the given value is null
 ``` javascript
 let name = null;
 console.log(Is.null(name)); // true
+
 name = undefined;
 console.log(Is.null(name)); // false
 ```
@@ -95,8 +96,10 @@ Check if the given value is undefined
 ``` javascript
 let name = 'Hasan';
 console.log(Is.undefined(name)); // false
+
 let myVar; // any declared variable without a value will be treated as undefined
 console.log(Is.undefined(myVar)); // true
+
 let age = undefined;
 console.log(Is.undefined(age)); // true
 ```
@@ -108,10 +111,13 @@ Check if the given value is a number whatever if its data type is String or Numb
 ``` javascript
 let numberInt = 12;
 console.log(Is.numeric(numberInt)); // true
+
 let numberFloat = 12.55;
 console.log(Is.numeric(numberFloat)); // true
+
 let numberWrittenInString = '99';
 console.log(Is.numeric(numberWrittenInString)); // true
+
 let floatWrittenInString = '99.99';
 console.log(Is.numeric(floatWrittenInString)); // true
 ```
@@ -121,6 +127,7 @@ Check if the given value is an integer and its data type is number
 ``` javascript
 let number = 12;
 console.log(Is.int(numberInt)); // true
+
 let numberInString = '12';
 console.log(Is.int(numberInString)); // false
 ```
@@ -132,8 +139,10 @@ Check if the given value is a float number and its data type is number
 ``` javascript
 let number = 921;
 console.log(Is.float(number)); // false
+
 number = 82.42;
 console.log(Is.float(number)); // true
+
 let numberInString = '12.5';
 console.log(Is.float(numberInString)); // false
 ```
@@ -144,6 +153,7 @@ This method works exactly same as isNaN as it is already implementing it xD.
 ``` javascript
 let number = 76; // number int
 console.log(Is.NaN(number)); // false
+
 number = '76'; // string
 console.log(Is.NaN(number)); // true
 ```
@@ -178,11 +188,14 @@ Any type of objects will be validated true no matter its object type
 ``` javascript
 let myObject = {};
 console.log(Is.object(myObject)); // true
+
 class myClass {}
 let anotherObject = new myClass;
 console.log(Is.object(myObject)); // true
+
 let myArray = [];
 console.log(Is.object(myArray)); // true
+
 // to check if the given value is an object but not an array
 //you must mix between Is.object AND Is.array to avoid an array
 if (Is.object(myVar) && ! Is.array(myVar)) {
@@ -199,9 +212,11 @@ Any type of objects will be validated as false unless it's a `{}` plain object.
 ``` javascript
 let myObject = {};
 console.log(Is.plainObject(myObject)); // true
+
 class myClass {}
 let anotherObject = new myClass;
 console.log(Is.plainObject(myObject)); // false
+
 let myArray = [];
 console.log(Is.plainObject(myArray)); // false
 ```
@@ -238,8 +253,11 @@ Check if the given value is a dom element
 
 ``` javascript
 console.log(Is.dom(document)); // false
+
 console.log(Is.dom(document.document)); // true
+
 let myForm = document.getElementById('my-form');
+
 console.log(Is.dom(document.body)); // true
 ```
 
@@ -253,6 +271,7 @@ Check if the given value is an instance of [HTMLFormElement](https://developer.m
 let myForm = document.getElementById('my-form');
 
 console.log(Is.formElement(myForm)); // true
+
 console.log(Is.formElement(document.body)); // false
 ```
 
@@ -268,6 +287,7 @@ let myForm = document.getElementById('my-form');
 let formDataForm = new FormData(myForm);
 
 console.log(Is.formData(myForm)); // false
+
 console.log(Is.formData(formDataForm)); // true
 ```
 
@@ -290,8 +310,11 @@ Check if the given object is iterable
 
 ``` javascript
 console.log(Is.iterable([])); // true
+
 console.log(Is.iterable({})); // false
+
 console.log(Is.iterable(new Map)); // true
+
 console.log(Is.iterable(new Set)); // true
 ```
 
@@ -301,6 +324,7 @@ Check if the given value is a `Symbol`
 
 ``` javascript
 console.log(Is.symbol(Symbol())); // true
+
 console.log(Is.symbol(Symbol('foo'))); // true
 ```
 
@@ -321,6 +345,7 @@ Check if the given value is a boolean value.
 
 ``` javascript
 console.log(Is.bool(true)); // true
+
 console.log(Is.bool(false)); // true
 ```
 
@@ -357,6 +382,7 @@ let callback = function () {
 }
 
 console.log(Is.callable(callback)); // true
+
 console.log(Is.callable(callback())); // false
 ```
 
@@ -386,11 +412,17 @@ Check if the given value is a string, number or boolean
 
 ``` javascript
 console.log(Is.scalar('hello')); // true
+
 console.log(Is.scalar(22.5)); // true
+
 console.log(Is.scalar(false)); // true
+
 console.log(Is.scalar(null)); // false
+
 console.log(Is.scalar(undefined)); // false
+
 console.log(Is.scalar([])); // false
+
 console.log(Is.scalar({})); // false
 ```
 
@@ -571,15 +603,17 @@ if (Is.browser('chrome')) {
 #### .eg
 > Validate mobile number for the following syntaxes:
 
-- 01[0|1|2|5]-8(digits)
-- +201[0|1|2|5]-8(digits)
-- 201[0|1|2|5]-8(digits)
+- `01[0|1|2|5]-8(digits)`
+- `+201[0|1|2|5]-8(digits)`
+- `201[0|1|2|5]-8(digits)`
 
 ```js
 
 let withCode = true; // to bypass mobile numbers starting with country code
 
 console.log(Is.mobileNumber.eg('01002223344')); // true
+
 console.log(Is.mobileNumber.eg('+201002223344', withCode)); // true
+
 console.log(Is.mobileNumber.eg('201002223344', withCode)); // true
 ```
