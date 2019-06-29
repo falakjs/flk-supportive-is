@@ -6,7 +6,7 @@ This is a very lightweight library to validate different things
 - [Supportive Is](#Supportive-Is)
 - [Table of contents](#Table-of-contents)
 - [Install](#Install)
-- [Attaching to the application](#Attaching-to-the-application)
+- [Importing](#Importing)
     - [Node JS](#Node-JS)
     - [using import syntax](#using-import-syntax)
     - [Browser](#Browser)
@@ -53,7 +53,7 @@ This is a very lightweight library to validate different things
 `npm install flk-supportive-is`
 
 
-# Attaching to the application
+# Importing
 
 ### Node JS
 
