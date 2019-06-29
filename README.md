@@ -32,10 +32,50 @@ import Is from 'flk-supportive-is';
 > **No dependencies required to use this library**
 
 # Usage
-                                       |
-#### Data Types
 
-There are many data types here to be checked
+Here is full methods list
+- [Supportive Is](#Supportive-Is)
+- [Install](#Install)
+- [Attaching to the application](#Attaching-to-the-application)
+    - [Node JS](#Node-JS)
+    - [using import syntax](#using-import-syntax)
+    - [Browser](#Browser)
+- [Dependencies](#Dependencies)
+- [Usage](#Usage)
+      - [Is.null](#Isnull)
+      - [Is.undefined](#Isundefined)
+      - [Is.numeric](#Isnumeric)
+      - [Is.int](#Isint)
+      - [Is.float](#Isfloat)
+      - [Is.NaN](#IsNaN)
+      - [Is.regex](#Isregex)
+      - [Is.array](#Isarray)
+      - [Is.object](#Isobject)
+      - [Is.plainObject](#IsplainObject)
+      - [Is.validHtmlId](#IsvalidHtmlId)
+      - [Is.jquery](#Isjquery)
+      - [Is.dom](#Isdom)
+      - [Is.formElement](#IsformElement)
+      - [Is.formData](#IsformData)
+      - [Is.a](#Isa)
+      - [Is.iterable](#Isiterable)
+      - [Is.symbol](#Issymbol)
+      - [Is.string](#Isstring)
+      - [Is.bool](#Isbool)
+      - [Is.function](#Isfunction)
+      - [Is.callable](#Iscallable)
+      - [Is.native](#Isnative)
+      - [Is.scalar](#Isscalar)
+      - [Is.empty](#Isempty)
+      - [Is.json](#Isjson)
+      - [Is.url](#Isurl)
+      - [Is.email](#Isemail)
+      - [Is.cookieEnabled](#IscookieEnabled)
+      - [Is.mobile.*](#Ismobile)
+      - [Is.desktop](#Isdesktop)
+      - [Is.browser](#Isbrowser)
+      - [Is.mobileNumber](#IsmobileNumber)
+        - [.eg](#eg)
 
 #### Is.null
 

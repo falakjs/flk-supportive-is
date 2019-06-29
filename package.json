@@ -1,7 +1,7 @@
 {
     "name": "flk-supportive-is",
     "description": "Powerful package to check for variable types, values and others.",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "main": "src/is.js",
     "typings": "src/is.d.ts"
 }
